@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import {Back, FilterIcon, GridIcon, ListIcon, SearchIcon} from "@/components/Icon";
 import Link from "next/link";
 import {DoctorCard} from "@/components/DoctorCard";
+import Image from "next/image";
 
 export default function Home() {
   const [dataView,setDataView] = useState("grid");
@@ -53,9 +54,8 @@ export default function Home() {
   const toggleView = () => {
     setDataView(dataView === "grid" ? "list" : "grid");
   };
-  // @ts-ignore
   return (
-      <div className="pt-2 overflow-scroll h-full bg-gradient-to-b from-[#DFDAFB] to-[#F9CCC5] font-quicksand">
+      <div className="pt-2 overflow-scroll h-screen bg-gradient-to-b from-[#DFDAFB] to-[#F9CCC5] font-quicksand">
         <div className="flex items-center mb-4 gap-4">
 
           <Link href="/">
@@ -73,32 +73,34 @@ export default function Home() {
               />
               <SearchIcon/>
             </div>
-            <button className="bg-white p-2 rounded-lg shadow-md" onClick={toggleView}>
+            <button className="bg-white p-3  rounded-lg" onClick={toggleView}>
               {dataView === "grid" ? <ListIcon /> : <GridIcon/>}
             </button>
-            <button className="bg-white p-2 rounded-lg shadow-md">
+            <button className="bg-white p-3 rounded-lg">
               <FilterIcon/>
             </button>
           </div>
-          {dataView === "grid" ? (<div className="grid grid-cols-2 sm:grid-cols-2 p-2">
+          {dataView === "grid" ? (<div className="grid grid-cols-2 sm:grid-cols-2">
             {doctors.map((doctor, index) => (
-                <div key={index} className="bg-white rounded-2xl shadow-lg px-1 py-2 m-2">
-                  <img src={doctor.image} alt="img" width={180}
-                       height={169}  className="rounded-md m-auto"/>
-                  <div className="text-center mt-4">
-                    <p className="font-semibold leading-[16px]  tracking-wider text-center text-[14px] text-[#000000]">{doctor.name}</p>
-                    <p className="text-[#6D6A5D]">{doctor.specialty}</p>
-                    <p className="text-gray-800 font-semibold">Session Fee: {doctor.fee}</p>
+                <div key={index} className="bg-white rounded-3xl shadow-lg px-3 py-3 m-2">
+                  <div className="flex justify-center"> <Image src={doctor.image} alt="img" width={210}
+                               height={190}  className="rounded-3xl"/></div>
+                  <div className="text-center mt-1">
+                    <div className="flex flex-col gap-1">
+                      <p className="font-semibold  text-[16px] text-[#000000]">{doctor.name}</p>
+                      <p className="text-[#6D6A5D]">{doctor.specialty}</p>
+                      <p className="text-[#6D6A5D] font-semibold">Session Fee:<span className="font-bold">{doctor.fee}</span></p>
+                    </div>
                     <a href="/schedule">
                       <button
-                          className="mt-4 px-4 py-2 bg-gradient-to-r from-[#BBA3E4] to-[#E7A1A0] text-white rounded-2xl w-full">Book
+                          className="mt-4 px-4 py-4 font-semibold text-[#FFFFFF] bg-gradient-to-r from-[#BBA3E4] to-[#E7A1A0] rounded-xl w-full">Book
                         Now
                       </button>
                     </a>
                   </div>
                 </div>
             ))}
-          </div>):(<div className="mt-10 p-3">
+          </div>):(<div className="mt-10 p-3 h-screen">
             {doctors.map((doctor, index) => (
                 <DoctorCard
                     key={index}

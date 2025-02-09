@@ -27,23 +27,23 @@ export const DoctorCard = ({ doctor, expanded, onToggle }) => {
             </div>
             {expanded && (
                 <div className="mt-4 border-t-2 border-gray-200">
-                    <div className="p-4">
+                    <div className="px-4 py-6">
                         <div className="flex justify-between ">
-                            <div>
+                            <div className="flex flex-col gap-1">
                                 <p className="text-gray-950 font-semibold text-[14px]">Expertise</p>
                                 <p className="text-[#6D6A5D] font-medium text-[12px]">{doctor.expertise}</p>
                             </div>
-                            <div>
+                            <div className="flex flex-col gap-1">
                                 <p className="text-gray-950 font-semibold text-[14px]">Gender</p>
                                 <p className="text-[#6D6A5D] font-medium text-[12px]">{doctor.gender}</p>
                             </div>
                         </div>
                         <div className="flex justify-between mt-2">
-                            <div>
+                            <div className="flex flex-col gap-1">
                                 <p className="text-gray-950 font-semibold text-[14px]">Session mode</p>
                                 <p className="text-[#6D6A5D] font-medium text-[12px]">{doctor.sessionMode}</p>
                             </div>
-                            <div>
+                            <div className="flex flex-col gap-1">
                                 <p className="text-gray-950 font-semibold text-[14px]">Session Fee</p>
                                 <p className="text-[#6D6A5D] font-medium text-[12px]">{doctor.fee}</p>
                             </div>
@@ -51,9 +51,7 @@ export const DoctorCard = ({ doctor, expanded, onToggle }) => {
                     </div>
                     <div className="p-4 border-t-2 border-gray-200">
                         <Link  href='/schedule'>
-                        <button className="w-full mt-4 py-2 rounded-lg text-white"
-                                style={{background: 'linear-gradient(to right, #a18cd1, #fbc2eb)'}}
-                        >
+                        <button className="w-full mt-4 py-3 px-4 text-white bg-gradient-to-r from-[#BBA3E4] to-[#E7A1A0] rounded-xl">
                             Book Now
                         </button>
                         </Link>

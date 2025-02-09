@@ -3,7 +3,7 @@
 export const Back = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+             stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
              className="lucide lucide-chevron-left">
             <path d="m15 18-6-6 6-6"/>
         </svg>
@@ -21,7 +21,7 @@ export const SearchIcon=()=>{
 }
 export const GridIcon=()=>{
     return (
-        <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="19" height="18"  viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="mask0_1_5028" maskUnits="userSpaceOnUse" x="0" y="0" width="25"
                   height="20">
                 <rect x="0.5" width="24" height="20" fill="#D9D9D9"/>
@@ -38,7 +38,7 @@ export const GridIcon=()=>{
 }
 export const FilterIcon = () => {
     return (
-        <svg width="20" height="20" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg  width="19" height="18"  viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M7.38465 13.25C7.13331 13.25 6.92306 13.1794 6.7539 13.0383C6.58456 12.8974 6.4999 12.7222 6.4999 12.5127V7.68917L0.901897 1.76292C0.709564 1.54917 0.681647 1.32694 0.818147 1.09625C0.954813 0.865417 1.18531 0.75 1.50965 0.75H14.4901C14.8145 0.75 15.045 0.865417 15.1816 1.09625C15.3181 1.32694 15.2902 1.54917 15.0979 1.76292L9.4999 7.68917V12.5127C9.4999 12.7222 9.41523 12.8974 9.2459 13.0383C9.07673 13.1794 8.86648 13.25 8.61515 13.25H7.38465ZM7.9999 7.25L12.9499 2H3.0499L7.9999 7.25Z"
                 fill="#6D6A5D"/>
