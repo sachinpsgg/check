@@ -1,7 +1,9 @@
-import { CalanderIcon, CloseIcon, TimerIcon } from "./Icon.jsx";
+
 import {useState} from "react";
-import TimeCard from "./TimeCard.jsx";
+
 import Drawer from '@mui/material/Drawer';
+import {CalanderIcon, CloseIcon, TimerIcon} from "@/components/Icon";
+import TimeCard from "@/components/TimeCard";
 
 
 const DateTimeInputs= () => {
