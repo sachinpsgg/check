@@ -17,15 +17,16 @@ export default function Page() {
     };
 
     return (
-        <div className="pt-4 bg-gradient-to-b from-[#ede9fe] to-[#f5d0fe] min-h-screen">
+        <div className="pt-4 bg-gradient-to-b from-[#ede9fe] to-[#f5d0fe] min-h-screen font-quicksand">
 
             <div className="flex items-center mb-4 gap-4 px-4">
                 <Link href="/" className="hover:opacity-80 transition">
                     <Back />
                 </Link>
-                <h1 className="text-lg font-semibold text-gray-800">
-                    Schedule Session
-                </h1>
+                {/*<h1 className="text-lg font-semibold text-gray-800">*/}
+                {/*    Schedule Session*/}
+                {/*</h1>*/}
+                <h1 className="text-[14px] font-semibold">Schedule Session</h1>
             </div>
 
             <div className="w-full mx-auto p-4">
@@ -35,7 +36,7 @@ export default function Page() {
                 <Card name="Saria Dilon" phone="+91 9876543210" image="/Saria.png" />
 
                 <h2 className="text-gray-600 mb-2 mt-4">Session Type</h2>
-                <div className="bg-white p-2 rounded-lg mb-4 shadow">
+                <div className="bg-white p-2 rounded-lg mb-4 shadow text-black text-[14px] font-semibold">
                     <CustomDropdown />
                 </div>
                 <RadioInput
@@ -44,14 +45,11 @@ export default function Page() {
                     onChange={handleModeChange}
                 />
 
-                {/* Date & Time Picker */}
                 <h2 className="text-gray-600 mb-2 mt-4">Session Date & Time</h2>
                 <DateTimeInputs
                     onDateChange={(date) => console.log("Selected Date:", date)}
                     onTimeChange={(time) => console.log("Selected Time:", time)}
                 />
-
-                {/* Online Session Link (conditional rendering) */}
                 {selectedMode === "Online" && (
                     <div className="w-full mt-4">
                         <label className="block text-gray-600 text-sm font-medium mb-2">
@@ -80,7 +78,7 @@ export default function Page() {
                     <button className="w-1/2 bg-transparent text-[#CC627B] p-2 border border-[#CC627B] rounded-lg mr-2 hover:bg-[#f8e0e6] transition">
                         Cancel
                     </button>
-                    <button className="w-1/2 bg-pink-100 text-pink-500 p-2 rounded-lg hover:bg-pink-200 transition">
+                    <button className="w-1/2 bg-gradient-to-r from-[#BBA3E4] to-[#E7A1A0] text-[#FFFFFF] p-2 rounded-lg hover:bg-pink-200 transition">
                         Confirm
                     </button>
                 </div>

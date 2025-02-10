@@ -11,7 +11,7 @@ const DateTimeInputs= () => {
     const [selectedDate, setSelectedDate] =useState(null)
     const [selectedTime, setSelectedTime] =useState(null)
     const [openBottom, setOpenBottom] = useState(false);
-    const [expandedCard, setExpandedCard] = useState(null)
+    const [expandedCard, setExpandedCard] = useState(true)
 
     const TimeData = [
         {
@@ -85,8 +85,8 @@ const DateTimeInputs= () => {
                         placeholder="HH : MM"
                         open={openBottom}
                         onClose={closeDrawerBottom}
-                        className="fixed bottom-0 left-0 w-full max-h-[90vh] p-4 rounded-t-2xl bg-white shadow-lg overflow-y-auto" onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                    >
-                        <div className="mb-6 flex items-center justify-between">
+                        className="fixed bottom-0 left-0 w-full max-h-[90vh] p-4 rounded-t-2xl bg-white shadow-lg overflow-y-auto"                 >
+                        <div className="mb-6 flex items-center justify-between p-4">
                             <h2 className="text-lg font-bold text-gray-800">
                                 Select Session Time
                             </h2>

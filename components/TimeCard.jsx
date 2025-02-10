@@ -1,10 +1,10 @@
 import {DownIcon, UpIcon} from "./Icon";
 
 
-// eslint-disable-next-line react/prop-types
+
 const TimeCard = ({ expanded, onToggle, timeData }) => {
     return (
-        <div className="bg-white rounded-lg shadow-md mb-4">
+        <div className="bg-white rounded-lg shadow-md mb-4 p-4">
             <div className="flex items-center justify-between p-4">
                 <div className="text-gray-800 font-medium">{timeData.session}</div>
                 <button
@@ -21,7 +21,7 @@ const TimeCard = ({ expanded, onToggle, timeData }) => {
                         {timeData.time.map((time, i) => (
                             <button
                                 key={i}
-                                className="border-2 border-pink-500 rounded-md px-4 py-2 hover:bg-pink-500 hover:text-white transition"
+                                className="border-2 border-pink-500 rounded-md px-4 py-2 hover:text-white transition"
                                 aria-label={`Select time ${time}`}
                             >
                                 <span className="text-pink-500 font-medium">{time}</span>
